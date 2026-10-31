@@ -1,6 +1,6 @@
 {
   "name": "decky-volume-mixer",
-  "version": "0.1.0-3bf361a",
+  "version": "0.2.0",
   "description": "Controls the volume of your applications",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allmazz/decky-volume-mixer.git"
+    "url": "git+https://github.com/SilvertongueRED/Decky-VolumeMixer-Windows.git"
   },
   "keywords": [
     "decky",
@@ -22,9 +22,9 @@
   "author": "Kirill Nikiforov <me@allmazz.me>",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/allmazz/decky-volume-mixer/issues"
+    "url": "https://github.com/SilvertongueRED/Decky-VolumeMixer-Windows/issues"
   },
-  "homepage": "https://github.com/allmazz/decky-volume-mixer#readme",
+  "homepage": "https://github.com/SilvertongueRED/Decky-VolumeMixer-Windows#readme",
   "devDependencies": {
     "@decky/rollup": "^1.0.2",
     "@decky/ui": "^4.11.3",
