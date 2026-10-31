@@ -1,10 +1,11 @@
 {
-  "name": "Volume Mixer",
-  "author": "Luis Hernández",
+  "name": "Mixer",
+  "author": "Kirill Nikiforov",
   "flags": [],
+  "api_version": 1,
   "publish": {
-    "tags": ["mixer", "audio", "control"],
-    "description": "Control the sound level of any running app on the steam deck individually.",
-    "image": "https://opengraph.githubassets.com/1/SteamDeckHomebrew/PluginLoader"
+    "tags": ["media", "audio", "bluetooth"],
+    "description": "Controls the volume of your applications",
+    "image": "https://raw.githubusercontent.com/allmazz/decky-volume-mixer/main/assets/thumbnail.jpg"
   }
 }

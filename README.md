@@ -1,42 +1,24 @@
-# Steam Deck Volume Mixer plugin
+## decky-volume-mixer
 
-A [decky-loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin that allows the user to control the volume of any running program on the steam deck individually. Inspired on the functionality of Windows' Volume Mixer.
+Control the volume of individual applications directly from game mode using Pipewire.
 
-![volume mixer screen shot](/assets/Volume-mixer-screenshot.jpeg)
+### Features
 
-## Dependencies
+- **Per-app volume control** — adjust the volume of each running application independently
+- **Hide apps** — a controller-friendly "Hide apps" button lets you toggle individual apps out of (or back into) the mixer without typing regexes
+- **Pipewire integration** — works natively with Pipewire via `pw-dump` and `wpctl`
+- **Configurable** — tweak plugin behavior through the settings panel
 
-This plugin was created using the [decky-plugin-template](https://github.com/SteamDeckHomebrew/decky-plugin-template) and uses its dependencies. 
+### Build
 
-Relies on the user having `pnpm` installed on their system. This can be downloaded from `npm` itself which is recommended. 
-
-#### Linux
-
-```bash
-sudo npm i -g pnpm
+```sh
+make       # install deps, build, and package into build/decky-volume-mixer.zip
+make build # install deps and build without packaging
+make clean # remove dist and build directories
 ```
 
-### How to run
+### Screenshots
 
-Clone this repo and run these commands:
-
-```bash
-pnpm i
-pnpm run build
-```
-
-To transfer this plugin to the deck you can run the vscode tasks that are configured to deploy it to your deck, checkout .vscode folder for reference.
-
-#### Other important information
-
-Everytime you change the frontend code (`index.tsx` etc) you will need to rebuild using the commands from step 2 above or the build task if you're using vscode or a derivative.
-
-Note: If you are receiving build errors due to an out of date library, you should run this command inside of your repository:
-
-```bash
-pnpm update decky-frontend-lib --latest
-```
-
-## Important information about privacy
-
-This plugin doesn't use any root privileges to modify the volume level of the running applications nor sends any kind of data to the internet.
+| Main View | Settings |
+|:---------:|:--------:|
+| ![Main View](./assets/thumbnail.jpg) | ![Settings](./assets/thumbnail-settings.jpg) |
