@@ -1,8 +1,8 @@
-# Decky Volume Mixer (Windows)
+# Decky Volume Mixer (Windows + Steam Deck)
 
-A per-app volume mixer for Decky Loader for Windows — control the volume of each running application from the Steam Big Picture / Game Mode quick-access menu, without leaving your game.
+A per-app volume mixer for Decky Loader on **Windows and Steam Deck / SteamOS** — control the volume of each running application from the Steam Big Picture / Game Mode quick-access menu, without leaving your game.
 
-This is a Windows port of [allmazz/decky-volume-mixer](https://github.com/allmazz/decky-volume-mixer) (PipeWire/SteamOS). On Windows it talks to the **Windows Core Audio** API directly (pure Python `ctypes`/COM — no extra dependencies, no external tools). The original PipeWire backend is still in `main.py` and is used automatically on SteamOS.
+This is a Windows port of [allmazz/decky-volume-mixer](https://github.com/allmazz/decky-volume-mixer) (PipeWire/SteamOS). On Windows it talks to the **Windows Core Audio** API directly (pure Python `ctypes`/COM — no extra dependencies, no external tools). On **Steam Deck / SteamOS** it uses the original PipeWire backend (`pw-dump` + `wpctl`). The same zip works on both; the backend is chosen automatically at startup.
 
 ## Features
 
@@ -25,14 +25,21 @@ For each audio session the plugin picks the first useful name from:
 
 ## Install
 
-1. Download `decky-volume-mixer-v0.2.0.zip` from the [Releases](../../releases) page.
-2. Extract it so you end up with `...\homebrew\plugins\decky-volume-mixer\` containing `main.py`, `plugin.json`, `package.json` and `dist\`.
-3. Restart Decky Loader (or reload plugins). **Volume Mixer** appears in the quick-access menu.
+**One zip for both platforms.** Download `decky-volume-mixer-v0.3.0.zip` from the [Releases](../../releases) page.
+
+**Steam Deck / SteamOS**
+1. Copy the zip to the Deck.
+2. In Decky Loader: Settings -> Developer -> **Install Plugin from ZIP**, pick the zip.
+3. Reload Decky (or restart Steam). **Mixer** appears in the quick-access menu.
+
+**Windows**
+1. Extract the zip so you end up with `...\homebrew\plugins\decky-volume-mixer\` containing `main.py`, `plugin.json`, `package.json` and `dist\` (or use Decky's Install from ZIP).
+2. Restart Decky Loader (or reload plugins).
 
 ## Requirements
 
-- Windows 10/11 with Decky Loader for Windows
-- Python (provided by Decky) — no extra packages needed
+- **Windows 10/11** with Decky Loader for Windows, or **Steam Deck / SteamOS** with Decky Loader
+- Nothing extra to install: Windows uses the built-in Core Audio API, SteamOS ships PipeWire
 
 ## Build from source
 
